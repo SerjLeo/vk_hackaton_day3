@@ -23,9 +23,8 @@ const Place = ({ item, order, onIncrementPosition, onDecrementPosition, area }) 
         return result + parseInt(price) * parseInt(count);
       }, 0);
 
-    return accounting.formatNumber(result, 0, ' ');
+    return accounting.formatNumber(result, 0, '');
   }, [ order, item ]);
-
   return (
     <div className="Place">
       <header className="Place__header">

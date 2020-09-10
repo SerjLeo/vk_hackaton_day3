@@ -32,7 +32,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
         return result + parseInt(item.price) * parseInt(count);
       }, 0);
 
-    return [ accounting.formatNumber(result, 0, ' '), products ];
+    return [ accounting.formatNumber(result, 0, ''), products ];
   }, [ order, item ]);
 
   const cacheData = (name, value) => {

@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://SerjLeo.github.io/vk_hackaton_day3",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
-    "surge-deploy": "npm run build && surge ./build --domain kozodoi-club-hack.surge.sh"
+    "surge-deploy": "npm run build && surge ./build --domain kozodoi-club-hack.surge.sh",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "gh-pages": "^3.1.0",
     "react-hot-loader": "^4.9.0",
     "react-scripts": "^3.1.2",
     "surge": "^0.21.3"
